@@ -64,6 +64,7 @@ GEM
       public_suffix (>= 2.0.2, < 5.0)
     autoprefixer-rails (10.2.5.0)
       execjs (< 2.8.0)
+    bigdecimal (3.0.2)
     bindex (0.8.1)
     bootsnap (1.7.7)
       msgpack (~> 1.0)
@@ -222,6 +223,7 @@ PLATFORMS
 
 DEPENDENCIES
   autoprefixer-rails (= 10.2.5)
+  bigdecimal
   bootsnap (>= 1.4.4)
   byebug
   capybara (>= 3.26)
@@ -249,4 +251,4 @@ RUBY VERSION
    ruby 2.7.3p183
 
 BUNDLED WITH
-   2.2.23
+   2.2.25
