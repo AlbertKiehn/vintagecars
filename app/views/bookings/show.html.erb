@@ -1,0 +1,22 @@
+<h1>BOOKING</h1>
+
+<h3>Starting Date:</h3>
+<h4><%= @booking.start_date %> </h4>
+
+<h3>Ending Date:</h3>
+<h4><%= @booking.end_date %> </h4>
+
+<h3>Car</h3>
+<h4><%= @car.name %> </h4>
+
+<h3>User</h3>
+<h4><%= @user.email %> </h4>
+
+<h3>Confirmation</h3>
+<% if @booking.confirmation == true %>
+  <h4>Your booking has been confirmed</h4>
+<% else %>
+  <h4>Your booking has not been confirmed</h4>
+<% end %>
+
+<p class="btn btn-danger"><%= link_to "Back to Bookings", "/bookings" %></p>
