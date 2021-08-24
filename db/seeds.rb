@@ -5,11 +5,19 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+<<<<<<< HEAD
+=======
+
+>>>>>>> master
 require 'faker'
 
 puts 'Cleaning database...'
 Booking.destroy_all
 Car.destroy_all
+<<<<<<< HEAD
+=======
+User.destroy_all
+>>>>>>> master
 puts 'Creating data...'
 
 10.times do

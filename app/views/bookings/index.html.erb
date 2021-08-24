@@ -1,0 +1,12 @@
+<h1>All of your offers</h1>
+<ul>
+  <% @bookings.each do |booking| %>
+    <li>---------------------------------</li>
+    <li><%= link_to "Booking Nr.#{booking.id}", "/cars/bookings/#{booking.id}" %></li>
+    <li>Car: <%= booking.car.name %></li>
+    <li>User: <%= booking.user.email %></li>
+    <li>Date: <%= booking.start_date %> - <%= booking.end_date %></li>
+  <% end %>
+</ul>
+
+<p class="btn btn-danger"><%= link_to "Book another car", "/cars/bookings/new" %></p>
