@@ -21,7 +21,7 @@ nav {
   padding-right: 10px;
 }
 
-.navbar {
+.navbar-homepage{
   position: relative;
   display: flex;
   justify-content: flex-end;
@@ -48,6 +48,8 @@ nav {
   padding: 10px 15px;
   text-decoration: none;
   color: black;
+  font-family: 'Playfair Display', serif;
+  font-size: 18px;
 }
 
 .nav-item:hover {
