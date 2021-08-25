@@ -1,12 +1,19 @@
 <h1>All of your offers</h1>
 <ul>
   <% @bookings.each do |booking| %>
-    <li>---------------------------------</li>
-    <li><%= link_to "Booking Nr.#{booking.id}", "/cars/bookings/#{booking.id}" %></li>
-    <li>Car: <%= booking.car.name %></li>
-    <li>User: <%= booking.user.email %></li>
-    <li>Date: <%= booking.start_date %> - <%= booking.end_date %></li>
+    <li><div class="card-product">
+      <img src="https://cdn.motor1.com/images/mgl/nxwbl/s1/dp-motorsport-porsche-911-964.jpg" />
+      <div class="card-product-infos">
+        <%= link_to "Booking Nr.#{booking.id}", "/cars/bookings/#{booking.id}" %>
+        <h2>Car: <%= booking.car.name %></h2>
+        <h2>User: <%= booking.user.email %></h2>
+        <p>Date: <%= booking.start_date %> - <%= booking.end_date %></p>
+      </div>
+    </div>
+    </li>
   <% end %>
+
 </ul>
 
 <p class="btn btn-danger"><%= link_to "Book another car", cars_path %></p>
+
