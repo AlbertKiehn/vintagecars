@@ -1,0 +1,26 @@
+.form-control{
+  font-family: 'Playfair Display', serif;
+}
+// .search-form-control .form-control {
+//     height: 5rem;
+//     box-shadow: 0 2px 6px rgb(0 0 0 / 8%);
+//     border: 1px solid #210505;
+// }
+
+.form-control {
+    display: block;
+    width: 50%;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: .30rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
