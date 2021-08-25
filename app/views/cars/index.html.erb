@@ -1,0 +1,24 @@
+
+<div class="container p-3 mb-2">
+    <div class="cover mb-4 d-flex align-items-center justify-content-center">
+        <div class="text-center">
+          <h1> Vintage-Cars </h1>
+        </div>
+    </div>
+    <div class="row d-flex justify-content-space-evenly">
+      <% @cars.each do |car| %>
+        <div class="col-m-6">
+          <div class="card pt-3 d-flex justify-content-space-evenly" style="width: 18rem;">
+              <%= link_to car_path(car) do %>
+                <img src="https://cdn.motor1.com/images/mgl/nxwbl/s1/dp-motorsport-porsche-911-964.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title"><%= car.name %></h5>
+                  <p class="card-text"><%= car.description %></p>
+                </div>
+              <% end %>
+          </div>
+         </div>
+       <% end %>
+    </div>
+  </div>
+</div>
