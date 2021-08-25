@@ -8,7 +8,6 @@
         <%= simple_form_for [@car, @booking] do |f| %>
           <%= f.input :start_date, as: :date %>
           <%= f.input :end_date, as: :date %>
-          <%= f.association :car, prompt: 'Select a Car', input_html: { class: 'select2' } %>
           <%= f.submit class: 'btn btn-flat' %>
         <% end %>
         </div>
@@ -16,4 +15,4 @@
   </div>
 </div>
 
-<p class="btn btn-danger"><%= link_to "Back to Bookings", "/bookings" %></p>
+<%# <p class="btn btn-danger"><%= link_to "Back to Bookings", bookings_path %></p> %>
