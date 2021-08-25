@@ -11,10 +11,9 @@
           <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
         </div>
       </li>
-      <li class="nav-item"><a href="#">List your car</a></li>
+      <li class="nav-item"><%= link_to "List your car", new_car_path %></li>
     </ul>
   </nav>
-
 
 <%# <%= link_to "Log in", (which path?bookings_path(@book) %>
 <%# <%= link_to "List your car", which path?bookings_path@book %>
