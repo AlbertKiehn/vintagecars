@@ -6,4 +6,5 @@
 <ul>
   <li><%= @car.model %> </li>
   <li><%= @car.description %> </li>
+  <%= link_to "book this car", new_car_booking_path(@car, @booking) %>
 </ul>

@@ -39,6 +39,9 @@ nav {
   left: 45%;
 }
 
+a{
+  margin-top: 6px;
+}
 .nav-links {
   list-style: none;
 }
@@ -64,3 +67,11 @@ nav {
   width: 100px;
   vertical-align: middle;
 }
+
+.dropdown-toggle {
+    margin-top: 16px;
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    color: black;
+}
+
