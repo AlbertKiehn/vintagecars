@@ -5,8 +5,8 @@ class Car < ApplicationRecord
 
   validates :name, :model, :description, presence: true
 
-  def self.search params
-    cars = Car.where(model_id: params[:model].to_i) unless params[:model].blank?
-    cars
-  end
+  # def self.search params
+  #   cars = Car.where(model_id: params[:model].to_i) unless params[:model].blank?
+  #   cars
+  # end
 end
