@@ -1,7 +1,7 @@
   <nav class="navbar-homepage">
     <a href="#" class="logo" >
       <%# <img src="/app/assets/images/logo-vintage-cars.png" alt="Vintage Cars logo"> %>
-      <%= image_tag 'final-logo-vintage-cars' %>
+      <%= image_tag 'https://i.imgur.com/QboE1j2.png' %>
     </a>
     <ul class="nav-links">
       <li class="nav-item dropdown"><p class="dropdown-toggle" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >Log in</p>
@@ -9,6 +9,8 @@
           <%= link_to "Log in", new_user_session_path, class: "dropdown-item" %>
           <%= link_to "Register", new_user_registration_path, class: "dropdown-item" %>
           <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
+          <%= link_to "Booking requests", mybookings_path, class: "dropdown-item" %>
+          <%= link_to "Bookings", bookings_path, class: "dropdown-item" %>
         </div>
       </li>
       <li class="nav-item"><%= link_to "List your car", new_car_path %></li>

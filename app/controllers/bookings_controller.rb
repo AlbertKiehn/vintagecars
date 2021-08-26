@@ -1,7 +1,11 @@
 class BookingsController < ApplicationController
-  before_action :set_booking, only: [:show, :toogle_confirmed]
+  before_action :set_booking, only: [:show, :edit, :update, :destroy]
 
   def index
+    @bookings = Booking.all
+  end
+
+  def mybookings
     @bookings = Booking.all
   end
 
@@ -24,6 +28,19 @@ class BookingsController < ApplicationController
   def show
     @car = @booking.car
     @user = @booking.user
+  end
+
+  def edit; end
+
+  def update
+    @booking.update(confirmation: true)
+    # Will raise ActiveModel::ForbiddenAttributesError
+    redirect_to bookings_path(@booking)
+  end
+
+  def destroy
+    @booking.destroy
+    redirect_to bookings_path
   end
 
   private

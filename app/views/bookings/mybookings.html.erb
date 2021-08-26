@@ -1,8 +1,8 @@
-<h1>All of your requested bookings</h1>
+<h1><strong>All of the requested bookings for your Cars</strong></h1>
 <% counter = 1 %>
 <ul>
   <% @bookings.each do |booking| %>
-    <% if booking.user == current_user %>
+    <% if booking.car.user == current_user %>
       <li><div class="card-product">
         <img src="https://cdn.motor1.com/images/mgl/nxwbl/s1/dp-motorsport-porsche-911-964.jpg" />
         <div class="card-product-infos">
@@ -10,18 +10,15 @@
           <h2>Car: <%= booking.car.name %></h2>
           <h2>User: <%= booking.user.email %></h2>
           <p>Date: <%= booking.start_date %> - <%= booking.end_date %></p>
-          <p>Status: <% if booking.confirmation == true %>
-          Booking confirmed
-          <% else %>
-          Booking not confirmed yet
-          <% end %>
         </div>
       </div>
       </li>
       <% counter += 1 %>
+    <% else %>
+    <% counter += 1 %>
+    <h2><strong>None of your cars has been requested for a booking.</strong></h2>
+    <% break if counter = 1 %>
     <% end %>
   <% end %>
 
 </ul>
-
-<p class="btn btn-warning"><%= link_to "Book another car", cars_path %></p>
