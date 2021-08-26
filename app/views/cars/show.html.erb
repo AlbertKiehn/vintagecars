@@ -4,13 +4,13 @@
     <h1><%= @car.name %></h1>
     </div>
   </div>
-  <ul>
-    <li>
-      <h2>Model:<%= @car.model %></h2>
-      <h2>Details:<%= @car.description %></h2>
-      <h2>Owner:<%= @car.user.email %></h2>
-
-    </li>
-    <%= link_to "book this car", new_car_booking_path(@car, @booking) %>
-  </ul>
   </div>
+</div>
+<ul>
+  <li><%= @car.model %> </li>
+  <li><%= @car.description %> </li>
+  <% if @car.photo.attached? %>
+    <%= cl_image_tag @car.photo.key, height: 300, width: 400, crop: :fill %>
+  <% end %>
+  <%= link_to "book this car", new_car_booking_path(@car, @booking) %>
+</ul>

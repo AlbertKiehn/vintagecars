@@ -73,5 +73,15 @@ a{
     font-family: 'Playfair Display', serif;
     font-size: 18px;
     color: black;
+  ;
 }
 
+  a.dropdown-item {
+    background-color: whitesmoke !important;
+    text-decoration: none;
+    outline: none !important;
+}
+  // a.dropdown-toggle:active, .open .dropdown-toggle {
+  //         background:#FFF !important;
+  //         color:#000 !important;
+  //     }
