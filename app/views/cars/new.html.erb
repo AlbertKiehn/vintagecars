@@ -2,5 +2,7 @@
   <%= c.input :name, placeholder: 'What is the name of your car?' %>
   <%= c.input :model, placeholder: 'Whats the model of your Car CARBIOLET/COUPE/SUV/SEDAN' %>
   <%= c.input :description, placeholder: 'Descripe your car: year, State, power...' %>
+  <%= c.input :photo, as: :file %>
   <%= c.submit class: 'btn btn-flat' %>
+
 <% end %>
