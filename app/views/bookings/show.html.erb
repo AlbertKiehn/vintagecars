@@ -12,11 +12,28 @@
 <h3>User</h3>
 <h4><%= @user.email %> </h4>
 
-<h3>Confirmation</h3>
-<% if @booking.confirmation == true %>
-  <h4>Your booking has been confirmed</h4>
+<% if @car.user == current_user %>
+  <%= form_for '/cars/bookings' do |form| %>
+    <table>
+        <tr>
+            <td><%= form.label 'confirmation_true', 'Confirm the booking' %></td>
+            <td><%= form.radio_button :confirmation, true %></td>
+        </tr>
+    </table>
+
+    <%= form.submit 'Answer' %>
+<% end %>
+
 <% else %>
-  <h4>Your booking has not been confirmed</h4>
+  <h3>Confirmation</h3>
+  <% if @booking.confirmation == true %>
+    <h4>Your booking has been confirmed</h4>
+  <% else %>
+    <h4>Your booking has not been confirmed</h4>
+     <%= link_to "/bookings/#{@booking.id}", method: :delete, data: { confirm: "Delete Booking?" } do %>
+        <i class="fa fa-trash-o" aria-hidden="true"></i>
+      <% end %>
+  <% end %>
 <% end %>
 
 <p class="btn btn-warning"><%= link_to "Back to Bookings", "/bookings" %></p>

@@ -7,6 +7,9 @@ Rails.application.routes.draw do
     resources :bookings, only: [:new, :create]
   end
   resources :bookings, only: [:index]
+  delete 'bookings/:id', to: 'bookings#destroy'
   get '/cars/bookings/:id', to: 'bookings#show'
+  post '/cars/bookings/:id', to: 'bookings#update'
+  get '/mybookings', to: 'bookings#mybookings'
 
 end
