@@ -3,6 +3,10 @@ class CarsController < ApplicationController
     @cars = Car.all
   end
 
+  def display
+    @cars = Car.all
+  end
+
   def show
     @car = Car.find(params[:id])
   end
@@ -28,6 +32,6 @@ class CarsController < ApplicationController
   private
 
   def cars_params
-    params.require(:car).permit(:name, :model, :description).with_defaults(user_id: current_user.id)
+    params.require(:car).permit(:name, :model, :description, :user).with_defaults(user_id: current_user.id)
   end
 end

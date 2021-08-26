@@ -1,10 +1,16 @@
-<div class="cover mb-4 d-flex align-items-center justify-content-center">
-  <div class="text-center">
-   <h1><%= @car.name %></h1>
+<div class="container-fluid">
+  <div class="cover mb-4 d-flex align-items-center justify-content-center">
+    <div class="text-center">
+    <h1><%= @car.name %></h1>
+    </div>
   </div>
-</div>
-<ul>
-  <li><%= @car.model %> </li>
-  <li><%= @car.description %> </li>
-  <%= link_to "book this car", new_car_booking_path(@car, @booking) %>
-</ul>
+  <ul>
+    <li>
+      <h2>Model:<%= @car.model %></h2>
+      <h2>Details:<%= @car.description %></h2>
+      <h2>Owner:<%= @car.user.email %></h2>
+
+    </li>
+    <%= link_to "book this car", new_car_booking_path(@car, @booking) %>
+  </ul>
+  </div>
