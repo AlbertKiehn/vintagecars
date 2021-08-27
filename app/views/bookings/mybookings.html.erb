@@ -1,4 +1,4 @@
-<h1><strong>All of the requested bookings for your Cars</strong></h1>
+<h1 id="title"><strong>All of the requested bookings for your Cars</strong></h1>
 <% counter = 1 %>
 <ul>
   <% @bookings.each do |booking| %>
@@ -6,7 +6,7 @@
       <li><div class="card-product">
         <%=cl_image_tag booking.car.photo.key, class:"card-img-top"%>
         <div class="card-product-infos">
-          <%= link_to "Booking Nr.#{counter}", "/cars/bookings/#{booking.id}" %>
+          <%= link_to "Booking Nr.#{counter}", "/cars/bookings/#{booking.id}", style: "color: black;" %>
           <h2>Car: <%= booking.car.name %></h2>
           <h2>User: <%= booking.user.email %></h2>
           <p>Date: <%= booking.start_date %> - <%= booking.end_date %></p>
