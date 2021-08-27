@@ -26,6 +26,7 @@ class BookingsController < ApplicationController
   end
 
   def show
+    @car = @booking.car
     @user = @booking.user
   end
 

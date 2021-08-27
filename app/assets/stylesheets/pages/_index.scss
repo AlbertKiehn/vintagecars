@@ -8,6 +8,7 @@
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
   align-items: center;
+  margin: 20px;
 }
 
 .card-product img {
@@ -87,4 +88,12 @@ li {
 .btn-gradient:hover {
   background: linear-gradient(#147EFF, #0F67DA);
   color: white;
+}
+
+#button {
+  margin-left: 55px;
+}
+
+#title {
+  text-align: center;
 }
