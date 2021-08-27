@@ -1,4 +1,4 @@
-<h1>All of your requested bookings</h1>
+<h1 id="title"><strong>All of your requested bookings</strong></h1>
 <% counter = 1 %>
 <ul>
   <% @bookings.each do |booking| %>
@@ -24,4 +24,4 @@
 
 </ul>
 
-<p class="btn btn-warning"><%= link_to "Book another car", cars_path %></p>
+<p class="btn btn-secondary" id="button"><%= link_to "Book another car", cars_path, style: "color: white; text-decoration: none;" %></p>
