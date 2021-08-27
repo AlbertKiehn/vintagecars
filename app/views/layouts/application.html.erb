@@ -16,10 +16,11 @@
   </head>
 
   <body>
-    <p class="notice"><%= notice %></p>
-    <%= render 'homepage_components/navbar'%>
+
+
     <%= yield %>
     <%= render 'shared/flashes' %>
     <%= render 'homepage_components/footer'%>
+    <p class="notice"><%= notice %></p>
   </body>
 </html>

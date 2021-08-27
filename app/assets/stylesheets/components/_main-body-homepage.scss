@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 .main-text-header{
-  font-size: 44px;
+  font-size: 48px;
 }
 
 .main-text-header, .main-text, {
@@ -9,9 +9,15 @@
   text-align: center;
 }
 
+.main-text{
+  font-size: 18px;
+}
+
 .text-above-searchbox{
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Playfair Display', serif;
+  margin-left: 30px;
   text-align: center;
+  font-weight: bold;
 }
 
 .search-form-control {
