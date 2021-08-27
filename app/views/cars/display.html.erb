@@ -4,13 +4,13 @@
   <% @cars.each do |car| %>
     <% if car.user == current_user %>
       <li><div class="card-product">
-        <img src="https://cdn.motor1.com/images/mgl/nxwbl/s1/dp-motorsport-porsche-911-964.jpg" />
+        <%=cl_image_tag car.photo.key, class:"card-img-top"%>
         <div class="card-product-infos">
           <%= link_to car_path(car) do %>
             <h2>Car: <%= car.name %></h2>
           <% end %>
             <h2>Model: <%= car.model %></h2>
-             <h2>Description: <%= car.description %></h2>
+            <h2>Description: <%= car.description %></h2>
         </div>
       </div>
       </li>

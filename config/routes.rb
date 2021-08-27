@@ -11,5 +11,5 @@ Rails.application.routes.draw do
   get '/cars/bookings/:id', to: 'bookings#show'
   post '/cars/bookings/:id', to: 'bookings#update'
   get '/mybookings', to: 'bookings#mybookings'
-
+  delete 'cars/:id', to: 'cars#destroy'
 end

@@ -28,6 +28,23 @@ class CarsController < ApplicationController
       render :new
     end
   end
+  Cloudinary.config do |config|
+    config.cloud_name = 'mk01'
+    config.api_key = '243339615997478'
+    config.api_secret = 'YEyzNmKecdmScbJTs5wcY3KFlO8'
+    config.secure = true
+    config.cdn_subdomain = true
+  end
+
+  def destroy
+    @car = Car.find(params[:id])
+    if @car.user == current_user
+      @car.destroy
+      redirect_to "/cars", notice: " * your offer has been taken down! * "
+    else
+      redirect_to "/cars", notice: " * action failed * you little twat, you are not the owner of this car *"
+    end
+  end
 
   private
 
