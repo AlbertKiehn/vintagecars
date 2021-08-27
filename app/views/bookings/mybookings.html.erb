@@ -4,7 +4,7 @@
   <% @bookings.each do |booking| %>
     <% if booking.car.user == current_user %>
       <li><div class="card-product">
-        <%=cl_image_tag car.photo.key, class:"card-img-top"%>
+        <%=cl_image_tag booking.car.photo.key, class:"card-img-top"%>
         <div class="card-product-infos">
           <%= link_to "Booking Nr.#{counter}", "/cars/bookings/#{booking.id}" %>
           <h2>Car: <%= booking.car.name %></h2>
@@ -14,10 +14,6 @@
       </div>
       </li>
       <% counter += 1 %>
-    <% else %>
-    <% counter += 1 %>
-    <h2><strong>None of your cars has been requested for a booking.</strong></h2>
-    <% break if counter = 1 %>
     <% end %>
   <% end %>
 

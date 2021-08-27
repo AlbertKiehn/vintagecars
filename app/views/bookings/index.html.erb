@@ -4,7 +4,7 @@
   <% @bookings.each do |booking| %>
     <% if booking.user == current_user %>
       <li><div class="card-product">
-        <img src="https://cdn.motor1.com/images/mgl/nxwbl/s1/dp-motorsport-porsche-911-964.jpg" />
+        <%=cl_image_tag booking.car.photo.key, class:"card-img-top"%>
         <div class="card-product-infos">
           <%= link_to "Booking Nr.#{counter}", "/cars/bookings/#{booking.id}" %>
           <h2>Car: <%= booking.car.name %></h2>
