@@ -23,6 +23,18 @@
   top: 8px;
   bottom: 8px;
   right: 8px;
+  background-color: darkgrey;
+  color: white;
+}
+
+.search-form-control .btn:hover{
+  background-color:gray;
+  color: white;
+}
+
+.search-form-control .btn a{
+  color: white;
+  text-decoration: none;
 }
 
 .search-form-control .form-control {
@@ -35,8 +47,17 @@
   border: 1px solid #0b0c0b;
   outline: none !important;
   box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+
 }
 
 .homepage-container{
-  height: 200px;
+  height: 350px;
+  background-color: #e0e3e4;
+}
+.form-control{
+  width: 70%;
+  background-color: #f8f9fa;
+}
+.search-form-control, .button{
+
 }
