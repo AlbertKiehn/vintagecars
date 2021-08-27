@@ -2,5 +2,39 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 16px;
+}
 
+.container h1{
+  font-size: 40px;
+}
+
+.card-title {
+  color: black;
+  text-decoration: none;
+  font-family: 'Playfair Display', serif;
+}
+
+.card-text{
+  font-family: serif;
+  color: #1f212b;
+}
+
+.cards a{
+  text-decoration: none
+  ;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 16px;
+    // box-shadow: 1px 1px rgb(63, 61, 61), -1em 0 .4em grey;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+
+}
+
+.card{
+  box-shadow: 0 0 30px rgba(0,0,0,0.2);
 }

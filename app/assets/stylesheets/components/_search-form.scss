@@ -14,7 +14,7 @@
 
 .form-control {
     display: block;
-    width: 30%;
+    width: 50%;
     padding: .375rem .75rem;
     font-size: 1rem;
     font-weight: 400;
@@ -28,4 +28,8 @@
     appearance: none;
     border-radius: .30rem;
     transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.search-form-control, .form-group{
+  width: 50%;
+  margin-left: 300px;
 }

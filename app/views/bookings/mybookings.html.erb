@@ -1,20 +1,46 @@
-<h1><strong>All of the requested bookings for your Cars</strong></h1>
-<% counter = 1 %>
-<ul>
-  <% @bookings.each do |booking| %>
-    <% if booking.car.user == current_user %>
-      <li><div class="card-product">
-        <%=cl_image_tag booking.car.photo.key, class:"card-img-top"%>
-        <div class="card-product-infos">
-          <%= link_to "Booking Nr.#{counter}", "/cars/bookings/#{booking.id}" %>
-          <h2>Car: <%= booking.car.name %></h2>
-          <h2>User: <%= booking.user.email %></h2>
-          <p>Date: <%= booking.start_date %> - <%= booking.end_date %></p>
-        </div>
-      </div>
-      </li>
-      <% counter += 1 %>
-    <% end %>
-  <% end %>
+  <nav id="navbar-all-pages">
+    <div id="logo-for-all-pages" class="logo">
+      <%= link_to cars_path do %>
+       <%= image_tag 'final-logo-vintage-cars' %>
+      <% end %>
+    </div>
 
-</ul>
+    <ul class="nav-links">
+      <li class="nav-item dropdown"><p class="dropdown-toggle" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" > <%= current_user ? "My Profiile" : "Log in" %> </p>
+        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+          <% if !current_user %>
+            <%= link_to "Log in", new_user_session_path, class: "dropdown-item" %>
+            <%= link_to "Register", new_user_registration_path, class: "dropdown-item" %>
+          <% else %>
+            <%= link_to "See my cars", display_cars_path, class: "dropdown-item" %>
+            <%= link_to "My booking requests", mybookings_path, class: "dropdown-item" %>
+            <%= link_to "My previous bookings", bookings_path, class: "dropdown-item" %>
+            <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
+          <% end %>
+        </div>
+      </li>
+    <li class="nav-item"><%= link_to "List your car", new_car_path %></li>
+
+    </ul>
+  </nav>
+
+  <h1 class="header-display-page">All of the requested bookings for your Cars</h1>
+  <% counter = 1 %>
+  <ul>
+    <% @bookings.each do |booking| %>
+      <% if booking.car.user == current_user %>
+        <li><div class="card-product">
+          <%=cl_image_tag booking.car.photo.key, class:"card-img-top"%>
+          <div class="card-product-infos">
+            <%= link_to "Booking Nr.#{counter}", "/cars/bookings/#{booking.id}" %>
+            <h2>Car: <%= booking.car.name %></h2>
+            <h2>User: <%= booking.user.email %></h2>
+            <p>Date: <%= booking.start_date %> - <%= booking.end_date %></p>
+          </div>
+        </div>
+        </li>
+        <% counter += 1 %>
+      <% end %>
+    <% end %>
+  </ul>
+

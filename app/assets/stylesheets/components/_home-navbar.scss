@@ -48,6 +48,7 @@ a{
 }
 .nav-links {
   list-style: none;
+  font-size: 16px;
 }
 
 .nav-item a {
@@ -56,7 +57,7 @@ a{
   text-decoration: none;
   color: black;
   font-family: 'Playfair Display', serif;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .nav-item:hover {
@@ -68,14 +69,14 @@ a{
 }
 
 .logo img {
-  width: 100px;
+  width: 70px;
   vertical-align: middle;
 }
 
 .dropdown-toggle {
     margin-top: 16px;
     font-family: 'Playfair Display', serif;
-    font-size: 18px;
+    font-size: 16px;
     color: black;
   ;
 }
@@ -85,7 +86,30 @@ a{
     text-decoration: none;
     outline: none !important;
 }
-  // a.dropdown-toggle:active, .open .dropdown-toggle {
-  //         background:#FFF !important;
-  //         color:#000 !important;
-  //     }
+
+#navbar-all-pages{
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+#logo-for-all-pages{
+  position: absolute;
+  top: 4px;
+  left: 45%;
+  margin-bottom: 10px;
+}
+
+.header-cars-page{
+  margin-top: 25px;
+  font-family: 'Playfair Display', serif;
+}
+
+.header-display-page{
+  margin-top: 35px;
+  font-family: 'Playfair Display', serif;
+  font-size: 28px;
+  text-align: center;
+}
