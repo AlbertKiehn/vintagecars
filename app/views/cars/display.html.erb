@@ -1,4 +1,14 @@
-<h1><strong>All of your Cars</strong></h1>
+
+<div class="container-fluid">
+  <div class="cover mb-4 d-flex align-items-center justify-content-center">
+    <div class="text-center">
+    <h1><strong>All of your Cars</strong></h1>
+    </div>
+  </div>
+  </div>
+</div>
+<p class="btn btn-secondary ml-4"><%= link_to "Book a car", cars_path, style:"color: white; text-decoration: none;" %></p>
+
 <% counter = 1 %>
 <ul>
   <% @cars.each do |car| %>
@@ -18,5 +28,3 @@
     <% end %>
   <% end %>
 </ul>
-
-<p class="btn btn-warning"><%= link_to "Book a car", cars_path %></p>

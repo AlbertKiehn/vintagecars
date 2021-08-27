@@ -1,17 +1,27 @@
 <div class="container-fluid">
-  <div class="cover mb-4 d-flex align-items-center justify-content-center">
-    <div class="text-center">
-    <h1><%= @car.name %></h1>
+    <div class="cover mb-4 d-flex align-items-center justify-content-center">
+      <div class="text-center">
+      <h1><strong><%= @car.name %></h1></strong>
+      </div>
+    </div>
+    </div>
+
+  <div class="card ml-4 mr-4 rounded p-3 shadow" style=" max-width: 100%;">
+    <div class="row g-0 ">
+      <div class="col-md-4">
+          <% if @car.photo.attached? %>
+            <%= cl_image_tag @car.photo.key, height: 350, width: 450, crop: :fill %>
+          <% end %>
+      </div>
+      <div class="col-md-8">
+        <div class="card-body ml-5 mt-5 ">
+          <h3 class="card-title mb-5"><strong>Model: <%= @car.model %></strong></h4>
+          <h4 class="card-text mb-5"> <strong>Details: <%= @car.description %></strong></h4>
+          <h5 class="card-text"><small class="text-muted">owner: <%= @car.user.email %></small></h5>
+          <p class="btn btn-secondary"><%= link_to "book this car", new_car_booking_path(@car, @booking), style:"color: white; text-decoration: none;" %></p>
+          <p class="btn btn-secondary"><%= link_to "delete the offer", "/cars/#{@car.id}", :confirm => "Are you sure?", :method => :delete,style:"color: white; text-decoration: none;" %></p>
+        </div>
+      </div>
     </div>
   </div>
-  </div>
 </div>
-<ul>
-  <li><%= @car.model %> </li>
-  <li><%= @car.description %> </li>
-  <% if @car.photo.attached? %>
-    <%= cl_image_tag @car.photo.key, height: 300, width: 400, crop: :fill %>
-  <% end %>
-  <%= link_to "book this car", new_car_booking_path(@car, @booking) %>
-  <%= link_to "Delete", "/cars/#{@car.id}", :confirm => "Are you sure?", :method => :delete %>
-</ul>
